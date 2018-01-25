@@ -16,8 +16,6 @@ namespace Assets.Scripts
             var margins = new WinApi.MARGINS { cxLeftWidth = -1 };
             var hwnd = NativeMethods.GetActiveWindow();
 
-            //NativeMethods.SetWindowLong(hwnd, WinApi.GWL_STYLE, WinApi.WS_POPUP | WinApi.WS_VISIBLE);
-
             // Transparent windows with click through
             NativeMethods.SetWindowLong(hwnd, WinApi.GWL_EXSTYLE, WinApi.WS_EX_LAYERED | WinApi.WS_EX_TRANSPARENT);
             NativeMethods.SetLayeredWindowAttributes(hwnd, 0, 255, WinApi.LWA_ALPHA);

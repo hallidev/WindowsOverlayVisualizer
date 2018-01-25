@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 158df3670c46d984fa47e9968ad2d694
+timeCreated: 1514661715
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: antena_1
+    100004: antena_2
+    100006: antena_3
+    100008: antena_4
+    100010: geo
+    100012: head
+    100014: hips
+    100016: hips_control
+    100018: L_ankle_1
+    100020: L_ankle_2
+    100022: L_elbow
+    100024: L_fingers_1
+    100026: L_fingers_2
+    100028: L_footend
+    100030: L_knee
+    100032: L_leg
+    100034: L_shoulder
+    100036: L_thumb_1
+    100038: L_thumb_2
+    100040: L_toes
+    100042: L_wrist_1
+    100044: neck
+    100046: R_ankle_1
+    100048: R_ankle_2
+    100050: R_elbow
+    100052: R_fingers_1
+    100054: R_fingers_2
+    100056: R_footend
+    100058: R_knee
+    100060: R_leg
+    100062: R_shoulder
+    100064: R_thumb_1
+    100066: R_thumb_2
+    100068: R_toes
+    100070: R_wrist_1
+    100072: Robot_01_mesh
+    100074: spine1
+    100076: spine2
+    100078: spine3
+    400000: //RootNode
+    400002: antena_1
+    400004: antena_2
+    400006: antena_3
+    400008: antena_4
+    400010: geo
+    400012: head
+    400014: hips
+    400016: hips_control
+    400018: L_ankle_1
+    400020: L_ankle_2
+    400022: L_elbow
+    400024: L_fingers_1
+    400026: L_fingers_2
+    400028: L_footend
+    400030: L_knee
+    400032: L_leg
+    400034: L_shoulder
+    400036: L_thumb_1
+    400038: L_thumb_2
+    400040: L_toes
+    400042: L_wrist_1
+    400044: neck
+    400046: R_ankle_1
+    400048: R_ankle_2
+    400050: R_elbow
+    400052: R_fingers_1
+    400054: R_fingers_2
+    400056: R_footend
+    400058: R_knee
+    400060: R_leg
+    400062: R_shoulder
+    400064: R_thumb_1
+    400066: R_thumb_2
+    400068: R_toes
+    400070: R_wrist_1
+    400072: Robot_01_mesh
+    400074: spine1
+    400076: spine2
+    400078: spine3
+    4300000: Robot_01_mesh
+    7400000: robot_1_idle
+    9500000: //RootNode
+    13700000: Robot_01_mesh
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 1
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: robot_1_idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: geo
+        weight: 1
+      - path: geo/hips_control
+        weight: 1
+      - path: hips
+        weight: 1
+      - path: hips/L_leg
+        weight: 1
+      - path: hips/L_leg/L_knee
+        weight: 1
+      - path: hips/L_leg/L_knee/L_ankle_1
+        weight: 1
+      - path: hips/L_leg/L_knee/L_ankle_1/L_ankle_2
+        weight: 1
+      - path: hips/L_leg/L_knee/L_ankle_1/L_ankle_2/L_toes
+        weight: 1
+      - path: hips/L_leg/L_knee/L_ankle_1/L_ankle_2/L_toes/L_footend
+        weight: 1
+      - path: hips/R_leg
+        weight: 1
+      - path: hips/R_leg/R_knee
+        weight: 1
+      - path: hips/R_leg/R_knee/R_ankle_1
+        weight: 1
+      - path: hips/R_leg/R_knee/R_ankle_1/R_ankle_2
+        weight: 1
+      - path: hips/R_leg/R_knee/R_ankle_1/R_ankle_2/R_toes
+        weight: 1
+      - path: hips/R_leg/R_knee/R_ankle_1/R_ankle_2/R_toes/R_footend
+        weight: 1
+      - path: hips/spine1
+        weight: 1
+      - path: hips/spine1/spine2
+        weight: 1
+      - path: hips/spine1/spine2/spine3
+        weight: 1
+      - path: hips/spine1/spine2/spine3/L_shoulder
+        weight: 1
+      - path: hips/spine1/spine2/spine3/L_shoulder/L_elbow
+        weight: 1
+      - path: hips/spine1/spine2/spine3/L_shoulder/L_elbow/L_wrist_1
+        weight: 1
+      - path: hips/spine1/spine2/spine3/L_shoulder/L_elbow/L_wrist_1/L_fingers_1
+        weight: 1
+      - path: hips/spine1/spine2/spine3/L_shoulder/L_elbow/L_wrist_1/L_fingers_1/L_fingers_2
+        weight: 1
+      - path: hips/spine1/spine2/spine3/L_shoulder/L_elbow/L_wrist_1/L_thumb_1
+        weight: 1
+      - path: hips/spine1/spine2/spine3/L_shoulder/L_elbow/L_wrist_1/L_thumb_1/L_thumb_2
+        weight: 1
+      - path: hips/spine1/spine2/spine3/neck
+        weight: 1
+      - path: hips/spine1/spine2/spine3/neck/head
+        weight: 1
+      - path: hips/spine1/spine2/spine3/neck/head/antena_1
+        weight: 1
+      - path: hips/spine1/spine2/spine3/neck/head/antena_1/antena_2
+        weight: 1
+      - path: hips/spine1/spine2/spine3/neck/head/antena_1/antena_2/antena_3
+        weight: 1
+      - path: hips/spine1/spine2/spine3/neck/head/antena_1/antena_2/antena_3/antena_4
+        weight: 1
+      - path: hips/spine1/spine2/spine3/R_shoulder
+        weight: 1
+      - path: hips/spine1/spine2/spine3/R_shoulder/R_elbow
+        weight: 1
+      - path: hips/spine1/spine2/spine3/R_shoulder/R_elbow/R_wrist_1
+        weight: 1
+      - path: hips/spine1/spine2/spine3/R_shoulder/R_elbow/R_wrist_1/R_fingers_1
+        weight: 1
+      - path: hips/spine1/spine2/spine3/R_shoulder/R_elbow/R_wrist_1/R_fingers_1/R_fingers_2
+        weight: 1
+      - path: hips/spine1/spine2/spine3/R_shoulder/R_elbow/R_wrist_1/R_thumb_1
+        weight: 1
+      - path: hips/spine1/spine2/spine3/R_shoulder/R_elbow/R_wrist_1/R_thumb_1/R_thumb_2
+        weight: 1
+      - path: Robot_01_mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 3.7
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.62
+    legTwist: 0.515
+    armStretch: 0.05
+    legStretch: 0
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

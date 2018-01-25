@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92c638b1696f4343a3fedcf34286400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpectrumSize: 10
+  SpectrumSize: 16
   ScalingStrategy: 1
   PostScaleCurve:
     serializedVersion: 2
@@ -205,8 +205,8 @@ GameObject:
   - component: {fileID: 383445472}
   - component: {fileID: 383445471}
   - component: {fileID: 383445470}
-  m_Layer: 0
-  m_Name: Plane
+  m_Layer: 8
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,35 +573,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 65952379128003988, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    - target: {fileID: 114883833026568428, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65390778100451538, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114316201275094734, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-        type: 2}
-      propertyPath: DesiredHeight
-      value: -0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533141239566226, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-        type: 2}
-      propertyPath: DesiredHeight
-      value: -0.2
+      propertyPath: PullUpForce
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 114533141239566226, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
       propertyPath: PullUpForce
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114316201275094734, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    - target: {fileID: 114533141239566226, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
-      propertyPath: PullUpForce
-      value: 100
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489922793834122, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114883833026568428, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}
@@ -730,7 +725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1661917271
 Transform:
   m_ObjectHideFlags: 0
@@ -769,15 +764,17 @@ MonoBehaviour:
   RightKnee: {fileID: 1710984848}
   MidSpine: {fileID: 1653917927}
   HeadSpectrumIndex: 9
-  LeftArmSpectrumIndex: 5
+  LeftArmSpectrumIndex: 0
   LeftElbowSpectrumIndex: 0
-  RightArmSpectrumIndex: 5
+  RightArmSpectrumIndex: 0
   RightElbowSpectrumIndex: 0
   LeftLegSpectrumIndex: 0
   LeftKneeSpectrumIndex: 0
   RightLegSpectrumIndex: 0
   RightKneeSpectrumIndex: 0
   MidSpineSpectrumIndex: 0
+  PullDown: 0.5
+  PullUp: 0.5
 --- !u!1 &1710984848 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1434735748172408, guid: ee723c31168eb6f42ac0a3eaedbf0538,

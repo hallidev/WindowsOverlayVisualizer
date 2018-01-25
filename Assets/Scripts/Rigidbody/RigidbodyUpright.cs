@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Character
+namespace Assets.Scripts.Rigidbody
 {
-    public class CharacterUpright : MonoBehaviour
+    public class RigidbodyUpright : MonoBehaviour
     {
-        private Rigidbody _rigidbody;
+        private UnityEngine.Rigidbody _rigidbody;
 
         public bool KeepUpright = true;
         public float UprightForce = 100;
@@ -14,7 +14,7 @@ namespace Assets.Scripts.Character
     
         public void Awake()
         {
-            _rigidbody = GetComponent<Rigidbody>();
+            _rigidbody = GetComponent<UnityEngine.Rigidbody>();
             _rigidbody.maxAngularVelocity = 40; // **** CANNOT APPLY HIGH ANGULAR FORCES UNLESS THE MAXANGULAR VELOCITY IS INCREASED ****
         }
 

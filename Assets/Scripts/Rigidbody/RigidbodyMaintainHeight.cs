@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Character
+namespace Assets.Scripts.Rigidbody
 {
-    public class CharacterMaintainHeight : MonoBehaviour
+    public class RigidbodyMaintainHeight : MonoBehaviour
     {
-        private Rigidbody _rigidbody;
+        private UnityEngine.Rigidbody _rigidbody;
         private float _groundHeight = 0;
 
         public float DesiredHeight = 1;
@@ -14,7 +14,7 @@ namespace Assets.Scripts.Character
 
         public void Start()
         {
-            _rigidbody = GetComponent<Rigidbody>();
+            _rigidbody = GetComponent<UnityEngine.Rigidbody>();
         }
 
         public void FixedUpdate()

@@ -5,16 +5,21 @@ namespace Assets.Scripts.Rigidbody
     public class RigidbodyMaintainHeight : MonoBehaviour
     {
         private UnityEngine.Rigidbody _rigidbody;
-        private float _groundHeight = 0;
+        private float _groundHeight;
 
-        public float DesiredHeight = 1;
+        public float DesiredHeight;
         public float PullUpForce = 10;
         public float LeadTime = 0.3f; // *** THIS IS USED TO SLOW DOWN WHEN APPROACHING THE DESIRED HEIGHT, INSTEAD OF OVERSHOOTING BACK AND FORTH **
         public Transform InRelationTo = null;
 
+        public float OriginalDesiredHeight { get; private set; }
+
         public void Start()
         {
             _rigidbody = GetComponent<UnityEngine.Rigidbody>();
+
+            DesiredHeight += transform.position.y;
+            OriginalDesiredHeight = DesiredHeight;
         }
 
         public void FixedUpdate()

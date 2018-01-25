@@ -8,13 +8,17 @@ namespace Assets.Scripts
 
         private Vector3 _viewPortOffset;
 
-        public void Update()
+        public void Awake()
         {
+            #if !UNITY_EDITOR
+
             if (_viewPortOffset != ViewportOffset)
             {
                 transform.position = Camera.main.ViewportToWorldPoint(ViewportOffset);
                 _viewPortOffset = ViewportOffset;
             }
+
+            #endif
         }
     }
 }

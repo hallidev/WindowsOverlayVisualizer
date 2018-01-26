@@ -6,6 +6,13 @@ using UnityEngine;
 
 namespace Assets.Scripts.AudioReactiveEffects
 {
+    public enum BumpDirection
+    {
+        UpDown,
+        LeftRight,
+        InOut
+    }
+
     public class ReactiveRagdoll : VisualizationEffectBase
     {
         private const int SpectrumSize = 64;
@@ -24,6 +31,19 @@ namespace Assets.Scripts.AudioReactiveEffects
         public GameObject RightLeg;
         public GameObject RightKnee;
         public GameObject MidSpine;
+
+        public BumpDirection HeadDirection;
+        public BumpDirection LeftArmDirection;
+        public BumpDirection LeftElbowDirection;
+        public BumpDirection LeftWristDirection;
+        public BumpDirection RightArmDirection;
+        public BumpDirection RightElbowDirection;
+        public BumpDirection RightWristDirection;
+        public BumpDirection LeftLegDirection;
+        public BumpDirection LeftKneeDirection;
+        public BumpDirection RightLegDirection;
+        public BumpDirection RightKneeDirection;
+        public BumpDirection MidSpineDirection;
 
         public bool DoHead;
         public bool DoLeftArm;
@@ -63,7 +83,7 @@ namespace Assets.Scripts.AudioReactiveEffects
         [Range(0, SpectrumSize - 1)]
         public int MidSpineSpectrumIndex;
 
-        public float HeightAudioScale = 0.2f;
+        public float BumpAmountAudioScale = 2f;
         public float ForceAudioScale = 0.2f;
         public float PullDown = 0.5f;
         public float PullUp = 0.5f;
@@ -93,11 +113,21 @@ namespace Assets.Scripts.AudioReactiveEffects
 
                 if (_ragdollParts[i].DoEffect)
                 {
-                    // Height
-                    maintainPos.DesiredPosition.y = maintainPos.OriginalDesiredPosition.y
-                                                    + normalizeToRange(spectrumData[_ragdollParts[i].SpectrumIndex],
-                                                        min, max)
-                                                    * HeightAudioScale;
+                    // Direction
+                    float amount = normalizeToRange(spectrumData[_ragdollParts[i].SpectrumIndex], min, max) * BumpAmountAudioScale;
+
+                    switch (_ragdollParts[i].BumpDirection)
+                    {
+                        case BumpDirection.UpDown:
+                            maintainPos.DesiredPosition.y = maintainPos.OriginalDesiredPosition.y + amount;
+                            break;
+                        case BumpDirection.LeftRight:
+                            maintainPos.DesiredPosition.x = maintainPos.OriginalDesiredPosition.x + amount;
+                            break;
+                        case BumpDirection.InOut:
+                            maintainPos.DesiredPosition.z = maintainPos.OriginalDesiredPosition.z + amount;
+                            break;
+                    }
 
                     // Pull force
                     //maintainPos.PullForce = maintainPos.OriginalPullForce +
@@ -119,6 +149,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = Head,
                 RigidbodyMaintainPosition = Head.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = HeadDirection,
                 SpectrumIndex = HeadSpectrumIndex,
                 DoEffect = DoHead
             });
@@ -127,6 +158,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = LeftArm,
                 RigidbodyMaintainPosition = LeftArm.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = LeftArmDirection,
                 SpectrumIndex = LeftArmSpectrumIndex,
                 DoEffect = DoLeftArm
             });
@@ -135,6 +167,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = LeftElbow,
                 RigidbodyMaintainPosition = LeftElbow.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = LeftElbowDirection,
                 SpectrumIndex = LeftElbowSpectrumIndex,
                 DoEffect = DoLeftElbow
             });
@@ -143,6 +176,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = LeftWrist,
                 RigidbodyMaintainPosition = LeftWrist.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = LeftWristDirection,
                 SpectrumIndex = LeftWristSpectrumIndex,
                 DoEffect = DoLeftWrist
             });
@@ -151,6 +185,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = RightArm,
                 RigidbodyMaintainPosition = RightArm.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = RightArmDirection,
                 SpectrumIndex = RightArmSpectrumIndex,
                 DoEffect = DoRightArm
             });
@@ -159,6 +194,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = RightElbow,
                 RigidbodyMaintainPosition = RightElbow.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = RightElbowDirection,
                 SpectrumIndex = RightElbowSpectrumIndex,
                 DoEffect = DoRightElbow
             });
@@ -167,6 +203,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = RightWrist,
                 RigidbodyMaintainPosition = RightWrist.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = RightWristDirection,
                 SpectrumIndex = RightWristSpectrumIndex,
                 DoEffect = DoRightWrist
             });
@@ -175,6 +212,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = LeftLeg,
                 RigidbodyMaintainPosition = LeftLeg.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = LeftLegDirection,
                 SpectrumIndex = LeftLegSpectrumIndex,
                 DoEffect = DoLeftLeg
             });
@@ -183,6 +221,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = LeftKnee,
                 RigidbodyMaintainPosition = LeftKnee.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = LeftKneeDirection,
                 SpectrumIndex = LeftKneeSpectrumIndex,
                 DoEffect = DoLeftKnee
             });
@@ -191,6 +230,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = RightLeg,
                 RigidbodyMaintainPosition = RightLeg.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = RightLegDirection,
                 SpectrumIndex = RightLegSpectrumIndex,
                 DoEffect = DoRightLeg
             });
@@ -199,6 +239,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = RightKnee,
                 RigidbodyMaintainPosition = RightKnee.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = RightKneeDirection,
                 SpectrumIndex = RightKneeSpectrumIndex,
                 DoEffect = DoRightKnee
             });
@@ -207,6 +248,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             {
                 GameObject = MidSpine,
                 RigidbodyMaintainPosition = MidSpine.GetComponent<RigidbodyMaintainPosition>(),
+                BumpDirection = MidSpineDirection,
                 SpectrumIndex = MidSpineSpectrumIndex,
                 DoEffect = DoMidSpine
             });
@@ -224,6 +266,7 @@ namespace Assets.Scripts.AudioReactiveEffects
         {
             public GameObject GameObject { get; set; }
             public RigidbodyMaintainPosition RigidbodyMaintainPosition { get; set; }
+            public BumpDirection BumpDirection { get; set; }
             public int SpectrumIndex { get; set; }
             public bool DoEffect { get; set; }
         }

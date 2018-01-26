@@ -117,11 +117,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1186857915231724, guid: ee723c31168eb6f42ac0a3eaedbf0538,
     type: 2}
   m_PrefabInternal: {fileID: 1319861100}
---- !u!1 &236155049 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1769381469103968, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &330169278
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,21 +520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ViewportOffset: {x: 0.8, y: 0.1, z: 10}
---- !u!1 &749240581 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1690494972973350, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
---- !u!1 &756627297 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1003984334419344, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
---- !u!1 &1093440271 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1751631088211458, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!4 &1273703983 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4747232656567182, guid: ee723c31168eb6f42ac0a3eaedbf0538,
@@ -584,15 +564,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114390552684391196, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    - target: {fileID: 114222004705529014, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
-      propertyPath: PullForce
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114618485949606326, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-        type: 2}
-      propertyPath: PullForce
-      value: 60
+      propertyPath: DesiredPosition.y
+      value: -0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}
@@ -626,19 +601,9 @@ Transform:
   m_Father: {fileID: 633893922}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1434283505 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1546106168547802, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &1474552966 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1890189409093224, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
---- !u!1 &1514551772 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1438724207978418, guid: ee723c31168eb6f42ac0a3eaedbf0538,
     type: 2}
   m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &1653917927 stripped
@@ -689,65 +654,32 @@ MonoBehaviour:
   AudioVisualizationStrategy: 1
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
-  Head: {fileID: 1474552966}
-  LeftArm: {fileID: 1514551772}
-  LeftElbow: {fileID: 1894438478}
-  LeftWrist: {fileID: 140657317}
-  RightArm: {fileID: 756627297}
-  RightElbow: {fileID: 1093440271}
-  RightWrist: {fileID: 357415178}
-  LeftLeg: {fileID: 1434283505}
-  LeftKnee: {fileID: 236155049}
-  RightLeg: {fileID: 749240581}
-  RightKnee: {fileID: 1710984848}
-  MidSpine: {fileID: 1653917927}
-  HeadDirection: 1
-  LeftArmDirection: 0
-  LeftElbowDirection: 0
-  LeftWristDirection: 0
-  RightArmDirection: 0
-  RightElbowDirection: 0
-  RightWristDirection: 0
-  LeftLegDirection: 0
-  LeftKneeDirection: 0
-  RightLegDirection: 0
-  RightKneeDirection: 0
-  MidSpineDirection: 0
-  DoHead: 0
-  DoLeftArm: 0
-  DoLeftElbow: 1
-  DoLeftWrist: 1
-  DoRightArm: 0
-  DoRightElbow: 1
-  DoRightWrist: 1
-  DoLeftLeg: 0
-  DoLeftKnee: 0
-  DoRightLeg: 0
-  DoRightKnee: 0
-  DoMidSpine: 1
-  HeadSpectrumIndex: 0
-  LeftArmSpectrumIndex: 0
-  LeftElbowSpectrumIndex: 56
-  LeftWristSpectrumIndex: 56
-  RightArmSpectrumIndex: 0
-  RightElbowSpectrumIndex: 56
-  RightWristSpectrumIndex: 56
-  LeftLegSpectrumIndex: 0
-  LeftKneeSpectrumIndex: 0
-  RightLegSpectrumIndex: 0
-  RightKneeSpectrumIndex: 0
-  MidSpineSpectrumIndex: 0
-  BumpAmountAudioScale: 2
-  ForceAudioScale: 0
-  PullDown: 0.1
-  PullUp: 1
---- !u!1 &1710984848 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1434735748172408, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
---- !u!1 &1894438478 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1178065396168914, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
+  RagdollParts:
+  - GameObject: {fileID: 1474552966}
+    BumpDirection: 1
+    SpectrumIndex: 0
+    BumpAmountScale: 0.6
+    PullDown: 0.2
+    PullUp: 0.2
+    DoEffect: 1
+  - GameObject: {fileID: 1653917927}
+    BumpDirection: 0
+    SpectrumIndex: 0
+    BumpAmountScale: 0.2
+    PullDown: 0
+    PullUp: 1
+    DoEffect: 1
+  - GameObject: {fileID: 140657317}
+    BumpDirection: 0
+    SpectrumIndex: 56
+    BumpAmountScale: 0.2
+    PullDown: 0
+    PullUp: 1
+    DoEffect: 1
+  - GameObject: {fileID: 357415178}
+    BumpDirection: 0
+    SpectrumIndex: 56
+    BumpAmountScale: 0.2
+    PullDown: 0
+    PullUp: 1
+    DoEffect: 1

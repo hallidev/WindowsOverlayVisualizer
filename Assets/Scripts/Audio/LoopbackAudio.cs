@@ -25,7 +25,7 @@ namespace Assets.Scripts.Audio
         public int SpectrumSize;
         public ScalingStrategy ScalingStrategy;
         public AnimationCurve PostScaleCurve;
-        [Range(0.0f, 10.0f)]
+        [Range(0.0f, 40.0f)]
         public float PostScaleMultiplier = 2.0f;
         public float[] SpectrumData;
         public float[] PostScaledSpectrumData;

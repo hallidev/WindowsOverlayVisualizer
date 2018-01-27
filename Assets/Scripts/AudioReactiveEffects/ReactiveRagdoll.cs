@@ -10,20 +10,12 @@ namespace Assets.Scripts.AudioReactiveEffects
     public struct ReactiveRagdollPart
     {
         public GameObject GameObject;
-        public BumpDirection BumpDirection;
+        public Vector3 BumpDirection;
         public int SpectrumIndex;
         public float BumpAmountScale;
-        public bool Invert;
         public float PullDown;
         public float PullUp;
         public bool DoEffect;
-    }
-
-    public enum BumpDirection
-    {
-        UpDown,
-        LeftRight,
-        InOut
     }
 
     public class ReactiveRagdoll : VisualizationEffectBase
@@ -52,23 +44,7 @@ namespace Assets.Scripts.AudioReactiveEffects
                     // Direction
                     float amount = normalizeToRange(spectrumData[ragdollPart.SpectrumIndex], min, max) * ragdollPart.BumpAmountScale;
 
-                    if (ragdollPart.Invert)
-                    {
-                        amount = -amount;
-                    }
-
-                    switch (ragdollPart.BumpDirection)
-                    {
-                        case BumpDirection.UpDown:
-                            maintainPos.DesiredPosition.y = maintainPos.OriginalDesiredPosition.y + amount;
-                            break;
-                        case BumpDirection.LeftRight:
-                            maintainPos.DesiredPosition.x = maintainPos.OriginalDesiredPosition.x + amount;
-                            break;
-                        case BumpDirection.InOut:
-                            maintainPos.DesiredPosition.z = maintainPos.OriginalDesiredPosition.z + amount;
-                            break;
-                    }
+                    maintainPos.DesiredPosition = maintainPos.OriginalDesiredPosition + ragdollPart.BumpDirection * amount;
                 }
                 else
                 {

@@ -299,7 +299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &420261391
 Transform:
   m_ObjectHideFlags: 0
@@ -660,6 +660,56 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114489922793834122, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114618485949606326, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: WaitForInit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489922793834122, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: WaitForInit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114054511541000642, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114054511541000642, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: WaitForInit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390552684391196, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: WaitForInit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114618485949606326, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489922793834122, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390552684391196, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114054511541000642, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}
   m_IsPrefabParent: 0
@@ -747,42 +797,42 @@ MonoBehaviour:
   PrimaryScaleFactor: 0
   RagdollParts:
   - GameObject: {fileID: 1474552966}
-    BumpDirection: 1
+    BumpDirection: {x: 1, y: 0, z: 0}
     SpectrumIndex: 0
     BumpAmountScale: 0.2
     PullDown: 0.3
     PullUp: 1.5
     DoEffect: 1
   - GameObject: {fileID: 1653917927}
-    BumpDirection: 0
+    BumpDirection: {x: 0, y: 1, z: 0}
     SpectrumIndex: 0
     BumpAmountScale: 0.4
     PullDown: 0.5
     PullUp: 1
     DoEffect: 1
   - GameObject: {fileID: 140657317}
-    BumpDirection: 0
+    BumpDirection: {x: -2, y: 1, z: -1}
     SpectrumIndex: 56
     BumpAmountScale: 0.8
     PullDown: 0.2
     PullUp: 2
     DoEffect: 1
   - GameObject: {fileID: 357415178}
-    BumpDirection: 0
+    BumpDirection: {x: 2, y: 1, z: -1}
     SpectrumIndex: 56
     BumpAmountScale: 0.8
     PullDown: 0.2
     PullUp: 2
     DoEffect: 1
   - GameObject: {fileID: 383028319}
-    BumpDirection: 0
+    BumpDirection: {x: 1, y: 1, z: 0}
     SpectrumIndex: 32
     BumpAmountScale: 0.8
     PullDown: 0.2
     PullUp: 2
     DoEffect: 1
   - GameObject: {fileID: 1136364641}
-    BumpDirection: 0
+    BumpDirection: {x: -1, y: 1, z: 0}
     SpectrumIndex: 32
     BumpAmountScale: 0.8
     PullDown: 0.2

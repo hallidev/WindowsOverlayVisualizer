@@ -299,7 +299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &420261391
 Transform:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ead2587ed77b444832bde95d8c6a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ViewportOffset: {x: 0.8, y: 0.1, z: 10}
+  ViewportOffset: {x: 0.9, y: 0.1, z: 10}
 --- !u!1 &816123868
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,15 +640,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114222004705529014, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-        type: 2}
-      propertyPath: DesiredPosition.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114222004705529014, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    - target: {fileID: 114437703380653024, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
       propertyPath: PullForce
-      value: 120
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114197563429505736, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: PullForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114197563429505736, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437703380653024, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: DesiredPosition.y
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}

@@ -237,13 +237,14 @@ GameObject:
   - component: {fileID: 199475772137650052}
   - component: {fileID: 114463542639729188}
   - component: {fileID: 114213363542920446}
+  - component: {fileID: 114413026615801944}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1353702189264544
 GameObject:
   m_ObjectHideFlags: 1
@@ -1618,8 +1619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b05aada214d39e448c2b60b68a65d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DesiredPosition: {x: 0, y: 0, z: 0}
-  PullForce: 100
+  DesiredPosition: {x: 0, y: -1, z: 0}
+  PullForce: 200
   LeadTime: 0.3
 --- !u!114 &114213363542920446
 MonoBehaviour:
@@ -1634,7 +1635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioVisualizationStrategy: 3
   AudioSampleIndex: 0
-  PrimaryScaleFactor: 200
+  PrimaryScaleFactor: 100
 --- !u!114 &114222004705529014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1706,6 +1707,20 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
+--- !u!114 &114413026615801944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1341007439017626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63be53fd866d59f4da12bf7ff2b4331a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioVisualizationStrategy: 4
+  AudioSampleIndex: 0
+  PrimaryScaleFactor: 2
 --- !u!114 &114437703380653024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1717,8 +1732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b05aada214d39e448c2b60b68a65d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DesiredPosition: {x: 0, y: 0, z: 0}
-  PullForce: 100
+  DesiredPosition: {x: 0, y: -1, z: 0}
+  PullForce: 200
   LeadTime: 0.3
 --- !u!114 &114463542639729188
 MonoBehaviour:
@@ -1733,7 +1748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioVisualizationStrategy: 3
   AudioSampleIndex: 0
-  PrimaryScaleFactor: 1
+  PrimaryScaleFactor: 0.4
 --- !u!114 &114489922793834122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2880,7 +2895,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -170601292
+  randomSeed: -720688352
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3323,11 +3338,11 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 4
+    type: 2
     angle: 30
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.5
+    radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}

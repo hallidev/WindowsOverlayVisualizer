@@ -193,6 +193,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1978168054315310, guid: ee723c31168eb6f42ac0a3eaedbf0538,
     type: 2}
   m_PrefabInternal: {fileID: 1319861100}
+--- !u!1 &383028319 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1178065396168914, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &383445468
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +510,7 @@ Transform:
   - {fileID: 1382975297}
   - {fileID: 1661917271}
   - {fileID: 383445469}
+  - {fileID: 816123869}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -520,6 +526,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ViewportOffset: {x: 0.8, y: 0.1, z: 10}
+--- !u!1 &816123868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 816123869}
+  - component: {fileID: 816123870}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &816123869
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816123868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 633893922}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &816123870
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816123868}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &1136364641 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1751631088211458, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
 --- !u!4 &1273703983 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4747232656567182, guid: ee723c31168eb6f42ac0a3eaedbf0538,
@@ -567,7 +643,12 @@ Prefab:
     - target: {fileID: 114222004705529014, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
       propertyPath: DesiredPosition.y
-      value: -0.2
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222004705529014, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+        type: 2}
+      propertyPath: PullForce
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}
@@ -658,28 +739,42 @@ MonoBehaviour:
   - GameObject: {fileID: 1474552966}
     BumpDirection: 1
     SpectrumIndex: 0
-    BumpAmountScale: 0.6
-    PullDown: 0.2
-    PullUp: 0.2
+    BumpAmountScale: 0.2
+    PullDown: 0.3
+    PullUp: 1.5
     DoEffect: 1
   - GameObject: {fileID: 1653917927}
     BumpDirection: 0
     SpectrumIndex: 0
-    BumpAmountScale: 0.2
-    PullDown: 0
+    BumpAmountScale: 0.4
+    PullDown: 0.5
     PullUp: 1
     DoEffect: 1
   - GameObject: {fileID: 140657317}
     BumpDirection: 0
     SpectrumIndex: 56
-    BumpAmountScale: 0.2
-    PullDown: 0
-    PullUp: 1
+    BumpAmountScale: 0.8
+    PullDown: 0.2
+    PullUp: 2
     DoEffect: 1
   - GameObject: {fileID: 357415178}
     BumpDirection: 0
     SpectrumIndex: 56
-    BumpAmountScale: 0.2
-    PullDown: 0
-    PullUp: 1
+    BumpAmountScale: 0.8
+    PullDown: 0.2
+    PullUp: 2
+    DoEffect: 1
+  - GameObject: {fileID: 383028319}
+    BumpDirection: 0
+    SpectrumIndex: 32
+    BumpAmountScale: 0.8
+    PullDown: 0.2
+    PullUp: 2
+    DoEffect: 1
+  - GameObject: {fileID: 1136364641}
+    BumpDirection: 0
+    SpectrumIndex: 32
+    BumpAmountScale: 0.8
+    PullDown: 0.2
+    PullUp: 2
     DoEffect: 1

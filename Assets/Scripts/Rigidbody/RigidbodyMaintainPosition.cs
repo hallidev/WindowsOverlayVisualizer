@@ -36,17 +36,21 @@ namespace Assets.Scripts.Rigidbody
                 init();
             }
 
-            var diff = DesiredPosition - (transform.position + _rigidbody.velocity * LeadTime);
+            if (IsInitialized)
+            {
+                var diff = DesiredPosition - (transform.position + _rigidbody.velocity * LeadTime);
 
-            var dist = new Vector3(Mathf.Abs(diff.x), Mathf.Abs(diff.y), Mathf.Abs(diff.z));
+                var dist = new Vector3(Mathf.Abs(diff.x), Mathf.Abs(diff.y), Mathf.Abs(diff.z));
 
-            var pullM = new Vector3(Mathf.Clamp01(dist.x / 0.3f), Mathf.Clamp01(dist.y / 0.3f), Mathf.Clamp01(dist.z / 0.3f));
+                var pullM = new Vector3(Mathf.Clamp01(dist.x / 0.3f), Mathf.Clamp01(dist.y / 0.3f),
+                    Mathf.Clamp01(dist.z / 0.3f));
 
-            var force = new Vector3(Mathf.Sign(diff.x) * PullForce * pullM.x * Time.deltaTime,
-                Mathf.Sign(diff.y) * PullForce * pullM.y * Time.deltaTime,
-                Mathf.Sign(diff.z) * PullForce * pullM.z * Time.deltaTime);
+                var force = new Vector3(Mathf.Sign(diff.x) * PullForce * pullM.x * Time.deltaTime,
+                    Mathf.Sign(diff.y) * PullForce * pullM.y * Time.deltaTime,
+                    Mathf.Sign(diff.z) * PullForce * pullM.z * Time.deltaTime);
 
-            _rigidbody.AddForce(force, ForceMode.Impulse);
+                _rigidbody.AddForce(force, ForceMode.Impulse);
+            }
         }
 
         public void OnDrawGizmos()

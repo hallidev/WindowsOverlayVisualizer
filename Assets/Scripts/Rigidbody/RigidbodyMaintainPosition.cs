@@ -9,21 +9,33 @@ namespace Assets.Scripts.Rigidbody
         public Vector3 DesiredPosition;
         public float PullForce = 10;
         public float LeadTime = 0.3f; // *** THIS IS USED TO SLOW DOWN WHEN APPROACHING THE DESIRED HEIGHT, INSTEAD OF OVERSHOOTING BACK AND FORTH **
+        public bool WaitForInit;
+        public float RestInitDelay = 2.0f;
 
         public Vector3 OriginalDesiredPosition { get; private set; }
         public float OriginalPullForce { get; private set; }
+        public bool IsInitialized { get; private set; }
 
         public void Start()
         {
             _rigidbody = GetComponent<UnityEngine.Rigidbody>();
 
-            DesiredPosition += transform.position;
-            OriginalDesiredPosition = DesiredPosition;
+            if (!WaitForInit)
+            {
+                init();
+            }
+
             OriginalPullForce = PullForce;
         }
 
         public void FixedUpdate()
         {
+            // Wait until the ragdoll is at rest before recording positions
+            if (Time.time > RestInitDelay && !IsInitialized && WaitForInit)
+            {
+                init();
+            }
+
             var diff = DesiredPosition - (transform.position + _rigidbody.velocity * LeadTime);
 
             var dist = new Vector3(Mathf.Abs(diff.x), Mathf.Abs(diff.y), Mathf.Abs(diff.z));
@@ -44,6 +56,13 @@ namespace Assets.Scripts.Rigidbody
                 Gizmos.DrawLine(transform.position, DesiredPosition);
                 Gizmos.DrawWireSphere(DesiredPosition, 0.1f);
             }
+        }
+
+        private void init()
+        {
+            DesiredPosition += transform.position;
+            OriginalDesiredPosition = DesiredPosition;
+            IsInitialized = true;
         }
     }
 }

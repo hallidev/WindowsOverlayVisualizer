@@ -13,6 +13,7 @@ namespace Assets.Scripts.AudioReactiveEffects
         public BumpDirection BumpDirection;
         public int SpectrumIndex;
         public float BumpAmountScale;
+        public bool Invert;
         public float PullDown;
         public float PullUp;
         public bool DoEffect;
@@ -38,6 +39,11 @@ namespace Assets.Scripts.AudioReactiveEffects
                 var ragdollPart = RagdollParts[i];
                 var maintainPos = ragdollPart.GameObject.GetComponent<RigidbodyMaintainPosition>();
 
+                if (!maintainPos.IsInitialized)
+                {
+                    continue;
+                }
+
                 float min = -RealtimeAudio.MaxAudioValue * ragdollPart.PullDown;
                 float max = RealtimeAudio.MaxAudioValue * ragdollPart.PullUp;
 
@@ -45,6 +51,11 @@ namespace Assets.Scripts.AudioReactiveEffects
                 {
                     // Direction
                     float amount = normalizeToRange(spectrumData[ragdollPart.SpectrumIndex], min, max) * ragdollPart.BumpAmountScale;
+
+                    if (ragdollPart.Invert)
+                    {
+                        amount = -amount;
+                    }
 
                     switch (ragdollPart.BumpDirection)
                     {
@@ -61,8 +72,11 @@ namespace Assets.Scripts.AudioReactiveEffects
                 }
                 else
                 {
-                    maintainPos.DesiredPosition.y = maintainPos.OriginalDesiredPosition.y;
-                    maintainPos.PullForce = maintainPos.OriginalPullForce;
+                    if (maintainPos.DesiredPosition != maintainPos.OriginalDesiredPosition)
+                    {
+                        maintainPos.DesiredPosition = maintainPos.OriginalDesiredPosition;
+                        maintainPos.PullForce = maintainPos.OriginalPullForce;
+                    }
                 }
             }
         }

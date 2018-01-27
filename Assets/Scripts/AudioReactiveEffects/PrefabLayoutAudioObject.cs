@@ -46,6 +46,7 @@ namespace Assets.Scripts.AudioReactiveEffects
             for (int i = 0; i < LoopbackAudio.SpectrumSize; i++)
             {
                 GameObject newGameObject = Instantiate(Prefab, transform);
+                newGameObject.layer = gameObject.layer;
                 _gameObjects.Add(newGameObject);
 
                 // Try to set various other used scripts

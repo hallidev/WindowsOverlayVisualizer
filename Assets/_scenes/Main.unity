@@ -640,15 +640,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 198334640680506358, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    - target: {fileID: 114054511541000642, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.5
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 198334640680506358, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    - target: {fileID: 114390552684391196, guid: ee723c31168eb6f42ac0a3eaedbf0538,
         type: 2}
-      propertyPath: randomSeed
-      value: -720688352
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}

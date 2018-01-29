@@ -5,14 +5,17 @@ namespace Assets.Scripts.Interop
 {
     public static class NativeMethods
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int MessageBoxW(IntPtr hwnd, string text, string caption, uint type);
+
         [DllImport("user32.dll")]
         public static extern IntPtr GetActiveWindow();
 
         [DllImport("user32.dll")]
-        public static extern int SetWindowLong(IntPtr hWnd, int nIndex, uint dwNewLong);
+        public static extern int SetWindowLong(IntPtr hwnd, int nIndex, uint dwNewLong);
 
         [DllImport("user32.dll")]
-        public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
+        public static extern bool ShowWindowAsync(IntPtr hwnd, int nCmdShow);
 
         [DllImport("user32.dll", EntryPoint = "SetLayeredWindowAttributes")]
         public static extern int SetLayeredWindowAttributes(IntPtr hwnd, int crKey, byte bAlpha, int dwFlags);
@@ -20,8 +23,11 @@ namespace Assets.Scripts.Interop
         [DllImport("user32.dll", EntryPoint = "SetWindowPos")]
         public static extern int SetWindowPos(IntPtr hwnd, int hwndInsertAfter, int x, int y, int cx, int cy, int uFlags);
 
-        [DllImport("Dwmapi.dll")]
-        public static extern uint DwmExtendFrameIntoClientArea(IntPtr hWnd, ref WinApi.MARGINS margins);
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmIsCompositionEnabled(out bool enabled);
+
+        [DllImport("dwmapi.dll")]
+        public static extern uint DwmExtendFrameIntoClientArea(IntPtr hwnd, ref WinApi.MARGINS margins);
     }
 
     public static class WinApi
@@ -36,6 +42,7 @@ namespace Assets.Scripts.Interop
         public const int LWA_ALPHA = 2;
         public const int SWP_FRAMECHANGED = 32;
         public const int SWP_SHOWWINDOW = 64;
+        public const uint MESSAGEBOXTYPE_OK = 0;
 
         public struct MARGINS
         {

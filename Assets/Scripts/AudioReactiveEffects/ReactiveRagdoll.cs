@@ -6,6 +6,19 @@ using UnityEngine;
 
 namespace Assets.Scripts.AudioReactiveEffects
 {
+    public enum ReactiveRagdollPoseType
+    {
+        Forward
+    }
+
+    [Serializable]
+    public struct ReactiveRagdollPose
+    {
+        public ReactiveRagdollPoseType Pose;
+        public Vector3 FacingDirection;
+        public ReactiveRagdollPart[] RagdollParts;
+    }
+
     [Serializable]
     public struct ReactiveRagdollPart
     {
@@ -20,15 +33,25 @@ namespace Assets.Scripts.AudioReactiveEffects
 
     public class ReactiveRagdoll : VisualizationEffectBase
     {
-        public ReactiveRagdollPart[] RagdollParts;
+        private ReactiveRagdollPose _currentPose;
+
+        public GameObject RagdollGameObject;
+        public ReactiveRagdollPose[] RagdollPoses;
+
+        public override void Start()
+        {
+            base.Start();
+
+            pickPose();
+        }
 
         public void Update()
         {
             var spectrumData = LoopbackAudio.GetAllSpectrumData(AudioVisualizationStrategy);
 
-            for (int i = 0; i < RagdollParts.Length; i++)
+            for (int i = 0; i < _currentPose.RagdollParts.Length; i++)
             {
-                var ragdollPart = RagdollParts[i];
+                var ragdollPart = _currentPose.RagdollParts[i];
                 var maintainPos = ragdollPart.GameObject.GetComponent<RigidbodyMaintainPosition>();
 
                 if (!maintainPos.IsInitialized)
@@ -57,10 +80,16 @@ namespace Assets.Scripts.AudioReactiveEffects
             }
         }
 
+        private void pickPose()
+        {
+            _currentPose = RagdollPoses[0];
+            RagdollGameObject.GetComponent<RigidbodiesFaceDirection>().FacingDirection = _currentPose.FacingDirection;
+        }
+
         private float normalizeToRange(float value, float min, float max)
         {
             // newvalue = (max'-min')/ (max - min) * (value - max) + max'
-            return (max - min) / (10) * (value - 10) + max;
+            return (max - min) / RealtimeAudio.MaxAudioValue * (value - RealtimeAudio.MaxAudioValue) + max;
         }
     }
 }

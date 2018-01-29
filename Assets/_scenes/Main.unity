@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -112,11 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &140657317 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1186857915231724, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &330169278
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,16 +203,6 @@ MonoBehaviour:
   FacingDirection: {x: 0, y: 0, z: 1}
   FacingForce: 120
   LeadTime: 0
---- !u!1 &357415178 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1978168054315310, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
---- !u!1 &383028319 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1178065396168914, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &383445468
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,11 +596,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1136364641 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1751631088211458, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &1161632118 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1690494972973350, guid: ee723c31168eb6f42ac0a3eaedbf0538,
@@ -659,6 +639,11 @@ MonoBehaviour:
 --- !u!4 &1273703983 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4747232656567182, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
+--- !u!1 &1314642112 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1890189409093224, guid: ee723c31168eb6f42ac0a3eaedbf0538,
     type: 2}
   m_PrefabInternal: {fileID: 1319861100}
 --- !u!1001 &1319861100
@@ -789,6 +774,31 @@ Prefab:
     - {fileID: 114716494241576630, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ee723c31168eb6f42ac0a3eaedbf0538, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1319861101 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1846805959022204, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
+--- !u!1 &1319861102 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1751631088211458, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
+--- !u!1 &1319861103 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1178065396168914, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
+--- !u!1 &1319861104 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978168054315310, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
+--- !u!1 &1319861105 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1186857915231724, guid: ee723c31168eb6f42ac0a3eaedbf0538,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &1382975296
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,11 +828,6 @@ Transform:
   m_Father: {fileID: 633893922}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1474552966 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1890189409093224, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &1533801316 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1087307330989558, guid: ee723c31168eb6f42ac0a3eaedbf0538,
@@ -864,11 +869,6 @@ MonoBehaviour:
   LeadTime: 0.3
   WaitForInit: 0
   RestInitDelay: 2
---- !u!1 &1653917927 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1846805959022204, guid: ee723c31168eb6f42ac0a3eaedbf0538,
-    type: 2}
-  m_PrefabInternal: {fileID: 1319861100}
 --- !u!1 &1661917270
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,49 +912,53 @@ MonoBehaviour:
   AudioVisualizationStrategy: 1
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
-  RagdollParts:
-  - GameObject: {fileID: 1474552966}
-    BumpDirection: {x: 1, y: 0, z: 0}
-    SpectrumIndex: 0
-    BumpAmountScale: 0.2
-    PullDown: 0.3
-    PullUp: 1.5
-    DoEffect: 1
-  - GameObject: {fileID: 1653917927}
-    BumpDirection: {x: 0, y: 1, z: 0}
-    SpectrumIndex: 0
-    BumpAmountScale: 0.4
-    PullDown: 0.5
-    PullUp: 1
-    DoEffect: 1
-  - GameObject: {fileID: 140657317}
-    BumpDirection: {x: -2, y: 1, z: -1}
-    SpectrumIndex: 56
-    BumpAmountScale: 0.8
-    PullDown: 0.2
-    PullUp: 2
-    DoEffect: 1
-  - GameObject: {fileID: 357415178}
-    BumpDirection: {x: 2, y: 1, z: -1}
-    SpectrumIndex: 56
-    BumpAmountScale: 0.8
-    PullDown: 0.2
-    PullUp: 2
-    DoEffect: 1
-  - GameObject: {fileID: 383028319}
-    BumpDirection: {x: 1, y: 1, z: 0}
-    SpectrumIndex: 32
-    BumpAmountScale: 0.8
-    PullDown: 0.2
-    PullUp: 2
-    DoEffect: 1
-  - GameObject: {fileID: 1136364641}
-    BumpDirection: {x: -1, y: 1, z: 0}
-    SpectrumIndex: 32
-    BumpAmountScale: 0.8
-    PullDown: 0.2
-    PullUp: 2
-    DoEffect: 1
+  RagdollGameObject: {fileID: 1696564153}
+  RagdollPoses:
+  - Pose: 0
+    FacingDirection: {x: 0, y: 0, z: 1}
+    RagdollParts:
+    - GameObject: {fileID: 1314642112}
+      BumpDirection: {x: 1, y: 0, z: 0}
+      SpectrumIndex: 0
+      BumpAmountScale: 0.2
+      PullDown: 0.3
+      PullUp: 1.5
+      DoEffect: 1
+    - GameObject: {fileID: 1319861101}
+      BumpDirection: {x: 0, y: 1, z: 0}
+      SpectrumIndex: 0
+      BumpAmountScale: 0.4
+      PullDown: 0.5
+      PullUp: 1
+      DoEffect: 1
+    - GameObject: {fileID: 1319861103}
+      BumpDirection: {x: -2, y: 1, z: -1}
+      SpectrumIndex: 56
+      BumpAmountScale: 0.8
+      PullDown: 0.2
+      PullUp: 2
+      DoEffect: 1
+    - GameObject: {fileID: 1319861102}
+      BumpDirection: {x: 2, y: 1, z: -1}
+      SpectrumIndex: 56
+      BumpAmountScale: 0.8
+      PullDown: 0.2
+      PullUp: 2
+      DoEffect: 1
+    - GameObject: {fileID: 1319861105}
+      BumpDirection: {x: 1, y: 1, z: 0}
+      SpectrumIndex: 32
+      BumpAmountScale: 0.8
+      PullDown: 0.2
+      PullUp: 2
+      DoEffect: 1
+    - GameObject: {fileID: 1319861104}
+      BumpDirection: {x: -1, y: 1, z: 0}
+      SpectrumIndex: 32
+      BumpAmountScale: 0.8
+      PullDown: 0.2
+      PullUp: 2
+      DoEffect: 1
 --- !u!1 &1696564153 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1903191421637448, guid: ee723c31168eb6f42ac0a3eaedbf0538,

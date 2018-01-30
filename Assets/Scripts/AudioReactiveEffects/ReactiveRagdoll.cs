@@ -28,7 +28,14 @@ namespace Assets.Scripts.AudioReactiveEffects
         public float BumpAmountScale;
         public float PullDown;
         public float PullUp;
+        public Vector3 MaxPositiveImpulseDuration;
+        public Vector3 MaxPositiveImpulseCooldown;
         public bool DoEffect;
+
+        [HideInInspector]
+        public Vector3 PositiveImpulseDuration;
+        [HideInInspector]
+        public Vector3 PositiveImpulseCooldown;
     }
 
     public class ReactiveRagdoll : VisualizationEffectBase
@@ -64,10 +71,30 @@ namespace Assets.Scripts.AudioReactiveEffects
 
                 if (ragdollPart.DoEffect)
                 {
-                    // Direction
                     float amount = normalizeToRange(spectrumData[ragdollPart.SpectrumIndex], min, max) * ragdollPart.BumpAmountScale;
+                    Vector3 amountWithDirection = ragdollPart.BumpDirection * amount;
 
-                    maintainPos.DesiredPosition = maintainPos.OriginalDesiredPosition + ragdollPart.BumpDirection * amount;
+                    // Record how long the amount has been positive
+                    if (amountWithDirection.y > 0.0f)
+                    {
+                        // If there is a value for this axis, see how long we've been in the positives
+                        if (ragdollPart.MaxPositiveImpulseDuration.y > 0.0f 
+                            && ragdollPart.PositiveImpulseDuration.y > ragdollPart.MaxPositiveImpulseDuration.y)
+                        {
+                            // If too long, remove the amount on this axis
+                            amountWithDirection.y = 0.0f;
+                        }
+
+                        ragdollPart.PositiveImpulseDuration.y += Time.deltaTime;
+                    }
+                    else
+                    {
+                        //ragdollPart.PositiveImpulseDuration.y = 0.0f;
+                    }
+
+                    // Direction
+
+                    maintainPos.DesiredPosition = maintainPos.OriginalDesiredPosition + amountWithDirection;
                 }
                 else
                 {

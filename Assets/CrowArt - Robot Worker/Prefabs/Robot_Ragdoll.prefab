@@ -1600,7 +1600,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 2
 --- !u!114 &114059007338141450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1673,7 +1673,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: -1, z: 0}
   PullForce: 200
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 0
 --- !u!114 &114213363542920446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0.2, z: 0}
   PullForce: 120
   LeadTime: 0.3
-  RestInitDelay: 0
+  InitDelay: 0
 --- !u!114 &114272863956159446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 2
 --- !u!114 &114394066213616248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1806,7 +1806,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: -1, z: 0}
   PullForce: 200
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 0
 --- !u!114 &114463542639729188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1835,7 +1835,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 2
 --- !u!114 &114558916149160282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 120
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 0
 --- !u!114 &114582647431154128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 120
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 0
 --- !u!114 &114618485949606326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  RestInitDelay: 2
+  InitDelay: 2
 --- !u!114 &114703990997696656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 400
   LeadTime: 0.3
-  RestInitDelay: 0
+  InitDelay: 0
 --- !u!114 &114902698261834512
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,7 +9,7 @@ namespace Assets.Scripts.Rigidbody
         public Vector3 DesiredPosition;
         public float PullForce = 10;
         public float LeadTime = 0.3f; // *** THIS IS USED TO SLOW DOWN WHEN APPROACHING THE DESIRED HEIGHT, INSTEAD OF OVERSHOOTING BACK AND FORTH **
-        public float RestInitDelay = 2.0f;
+        public float InitDelay = 0.0f;
 
         public Vector3 OriginalDesiredPosition { get; private set; }
         public float OriginalPullForce { get; private set; }
@@ -26,7 +26,7 @@ namespace Assets.Scripts.Rigidbody
         public void FixedUpdate()
         {
             // Wait until the ragdoll is at rest before recording positions
-            if (Time.time > RestInitDelay && !IsInitialized)
+            if (Time.time > InitDelay && !IsInitialized)
             {
                 init();
             }

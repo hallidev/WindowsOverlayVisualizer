@@ -15,6 +15,7 @@ namespace Assets.Scripts.Rigidbody
         public Vector3 OriginalDesiredPosition { get; private set; }
         public float OriginalPullForce { get; private set; }
         public bool IsInitialized { get; private set; }
+        public bool IsCooling { get; set; }
 
         public void Start()
         {
@@ -57,6 +58,14 @@ namespace Assets.Scripts.Rigidbody
         {
             if (enabled)
             {
+                var color = Color.green;
+
+                if (IsCooling)
+                {
+                    color = Color.red;
+                }
+
+                Gizmos.color = color;
                 Gizmos.DrawLine(transform.position, DesiredPosition);
                 Gizmos.DrawWireSphere(DesiredPosition, 0.1f);
             }

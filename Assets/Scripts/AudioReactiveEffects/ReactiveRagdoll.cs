@@ -82,6 +82,8 @@ namespace Assets.Scripts.AudioReactiveEffects
 
                     var cooledAmountWithDirection = doCooldown(ragdollPart, i, amountWithDirection);
 
+                    maintainPos.IsCooling = ragdollPart.IsInCooldownX || ragdollPart.IsInCooldownY || ragdollPart.IsInCooldownZ;
+
                     // Direction
                     maintainPos.DesiredPosition = maintainPos.OriginalDesiredPosition + cooledAmountWithDirection;
                 }
@@ -120,8 +122,10 @@ namespace Assets.Scripts.AudioReactiveEffects
 
                 if (ragdollPart.PositiveImpulseCooldown.x > ragdollPart.MaxPositiveImpulseCooldown.x)
                 {
+                    // Reset
                     ragdollPart.IsInCooldownX = false;
                     ragdollPart.PositiveImpulseCooldown.x = 0.0f;
+                    ragdollPart.PositiveImpulseDuration.x = 0.0f;
                 }
             }
             else
@@ -155,8 +159,10 @@ namespace Assets.Scripts.AudioReactiveEffects
 
                 if (ragdollPart.PositiveImpulseCooldown.y > ragdollPart.MaxPositiveImpulseCooldown.y)
                 {
+                    // Reset
                     ragdollPart.IsInCooldownY = false;
                     ragdollPart.PositiveImpulseCooldown.y = 0.0f;
+                    ragdollPart.PositiveImpulseDuration.y = 0.0f;
                 }
             }
             else
@@ -190,8 +196,10 @@ namespace Assets.Scripts.AudioReactiveEffects
 
                 if (ragdollPart.PositiveImpulseCooldown.z > ragdollPart.MaxPositiveImpulseCooldown.z)
                 {
+                    // Reset
                     ragdollPart.IsInCooldownZ = false;
                     ragdollPart.PositiveImpulseCooldown.z = 0.0f;
+                    ragdollPart.PositiveImpulseDuration.z = 0.0f;
                 }
             }
             else

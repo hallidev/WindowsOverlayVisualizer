@@ -946,13 +946,13 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861103}
-      BumpDirection: {x: -1, y: 1, z: 0}
+      BumpDirection: {x: -1, y: 1, z: 0.5}
       SpectrumIndex: 56
       BumpAmountScale: 0.8
       PullDown: 0.2
       PullUp: 2
       MaxPositiveImpulseDuration: {x: 0, y: 0.6, z: 0}
-      MaxPositiveImpulseCooldown: {x: 0, y: 0.2, z: 0}
+      MaxPositiveImpulseCooldown: {x: 0, y: 0.4, z: 0}
       DoEffect: 1
       PositiveImpulseDuration: {x: 0, y: 0, z: 0}
       PositiveImpulseCooldown: {x: 0, y: 0, z: 0}
@@ -960,13 +960,13 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861102}
-      BumpDirection: {x: 1, y: 1, z: 0}
+      BumpDirection: {x: 1, y: 1, z: 0.5}
       SpectrumIndex: 56
       BumpAmountScale: 0.8
       PullDown: 0.2
       PullUp: 2
       MaxPositiveImpulseDuration: {x: 0, y: 0.6, z: 0}
-      MaxPositiveImpulseCooldown: {x: 0, y: 0.2, z: 0}
+      MaxPositiveImpulseCooldown: {x: 0, y: 0.4, z: 0}
       DoEffect: 1
       PositiveImpulseDuration: {x: 0, y: 0, z: 0}
       PositiveImpulseCooldown: {x: 0, y: 0, z: 0}
@@ -974,13 +974,13 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861105}
-      BumpDirection: {x: 1, y: 1, z: 0}
+      BumpDirection: {x: 1, y: 1, z: -0.5}
       SpectrumIndex: 32
       BumpAmountScale: 0.8
       PullDown: 0.2
       PullUp: 2
       MaxPositiveImpulseDuration: {x: 0, y: 0.6, z: 0}
-      MaxPositiveImpulseCooldown: {x: 0, y: 0.2, z: 0}
+      MaxPositiveImpulseCooldown: {x: 0, y: 0.4, z: 0}
       DoEffect: 1
       PositiveImpulseDuration: {x: 0, y: 0, z: 0}
       PositiveImpulseCooldown: {x: 0, y: 0, z: 0}
@@ -988,13 +988,13 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861104}
-      BumpDirection: {x: -1, y: 1, z: 0}
+      BumpDirection: {x: -1, y: 1, z: -0.5}
       SpectrumIndex: 32
       BumpAmountScale: 0.8
       PullDown: 0.2
       PullUp: 2
       MaxPositiveImpulseDuration: {x: 0, y: 0.6, z: 0}
-      MaxPositiveImpulseCooldown: {x: 0, y: 0.2, z: 0}
+      MaxPositiveImpulseCooldown: {x: 0, y: 0.4, z: 0}
       DoEffect: 1
       PositiveImpulseDuration: {x: 0, y: 0, z: 0}
       PositiveImpulseCooldown: {x: 0, y: 0, z: 0}

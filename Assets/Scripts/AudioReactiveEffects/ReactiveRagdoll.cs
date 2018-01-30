@@ -23,6 +23,10 @@ namespace Assets.Scripts.AudioReactiveEffects
     public struct ReactiveRagdollPart
     {
         public GameObject GameObject;
+        public Vector3 RestingOffset;
+        public float PullForce;
+        public float LeadTime;
+        public float InitDelay;
         public Vector3 BumpDirection;
         public int SpectrumIndex;
         public float BumpAmountScale;

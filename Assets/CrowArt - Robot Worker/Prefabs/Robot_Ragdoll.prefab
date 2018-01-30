@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 54334674943295272}
   - component: {fileID: 144574111022706386}
   - component: {fileID: 114102909766541638}
-  - component: {fileID: 114092405015446148}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -1601,7 +1600,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  WaitForInit: 1
   RestInitDelay: 2
 --- !u!114 &114059007338141450
 MonoBehaviour:
@@ -1617,21 +1615,6 @@ MonoBehaviour:
   BodyForward: {x: 0, y: 0, z: 1}
   FacingDirection: {x: 0, y: 0, z: 1}
   FacingForce: 120
-  LeadTime: 0
---- !u!114 &114092405015446148
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1087307330989558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fcbef64979cff145be3b77b42689c05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BodyForward: {x: 0, y: 0, z: 1}
-  FacingDirection: {x: 0, y: 0, z: 1}
-  FacingForce: 100
   LeadTime: 0
 --- !u!114 &114102909766541638
 MonoBehaviour:
@@ -1690,7 +1673,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: -1, z: 0}
   PullForce: 200
   LeadTime: 0.3
-  WaitForInit: 0
   RestInitDelay: 2
 --- !u!114 &114213363542920446
 MonoBehaviour:
@@ -1720,8 +1702,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0.2, z: 0}
   PullForce: 120
   LeadTime: 0.3
-  WaitForInit: 0
-  RestInitDelay: 2
+  RestInitDelay: 0
 --- !u!114 &114272863956159446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1766,7 +1747,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  WaitForInit: 1
   RestInitDelay: 2
 --- !u!114 &114394066213616248
 MonoBehaviour:
@@ -1826,7 +1806,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: -1, z: 0}
   PullForce: 200
   LeadTime: 0.3
-  WaitForInit: 0
   RestInitDelay: 2
 --- !u!114 &114463542639729188
 MonoBehaviour:
@@ -1856,7 +1835,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  WaitForInit: 1
   RestInitDelay: 2
 --- !u!114 &114558916149160282
 MonoBehaviour:
@@ -1887,7 +1865,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 120
   LeadTime: 0.3
-  WaitForInit: 0
   RestInitDelay: 2
 --- !u!114 &114582647431154128
 MonoBehaviour:
@@ -1918,7 +1895,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 120
   LeadTime: 0.3
-  WaitForInit: 0
   RestInitDelay: 2
 --- !u!114 &114618485949606326
 MonoBehaviour:
@@ -1934,7 +1910,6 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
-  WaitForInit: 1
   RestInitDelay: 2
 --- !u!114 &114703990997696656
 MonoBehaviour:
@@ -1980,8 +1955,7 @@ MonoBehaviour:
   DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 400
   LeadTime: 0.3
-  WaitForInit: 0
-  RestInitDelay: 2
+  RestInitDelay: 0
 --- !u!114 &114902698261834512
 MonoBehaviour:
   m_ObjectHideFlags: 1

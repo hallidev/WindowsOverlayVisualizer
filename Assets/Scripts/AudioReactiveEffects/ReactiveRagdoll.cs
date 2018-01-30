@@ -36,6 +36,12 @@ namespace Assets.Scripts.AudioReactiveEffects
         public Vector3 PositiveImpulseDuration;
         [HideInInspector]
         public Vector3 PositiveImpulseCooldown;
+        [HideInInspector]
+        public bool IsInCooldownX;
+        [HideInInspector]
+        public bool IsInCooldownY;
+        [HideInInspector]
+        public bool IsInCooldownZ;
     }
 
     public class ReactiveRagdoll : VisualizationEffectBase
@@ -74,27 +80,10 @@ namespace Assets.Scripts.AudioReactiveEffects
                     float amount = normalizeToRange(spectrumData[ragdollPart.SpectrumIndex], min, max) * ragdollPart.BumpAmountScale;
                     Vector3 amountWithDirection = ragdollPart.BumpDirection * amount;
 
-                    // Record how long the amount has been positive
-                    if (amountWithDirection.y > 0.0f)
-                    {
-                        // If there is a value for this axis, see how long we've been in the positives
-                        if (ragdollPart.MaxPositiveImpulseDuration.y > 0.0f 
-                            && ragdollPart.PositiveImpulseDuration.y > ragdollPart.MaxPositiveImpulseDuration.y)
-                        {
-                            // If too long, remove the amount on this axis
-                            amountWithDirection.y = 0.0f;
-                        }
-
-                        ragdollPart.PositiveImpulseDuration.y += Time.deltaTime;
-                    }
-                    else
-                    {
-                        //ragdollPart.PositiveImpulseDuration.y = 0.0f;
-                    }
+                    var cooledAmountWithDirection = doCooldown(ragdollPart, i, amountWithDirection);
 
                     // Direction
-
-                    maintainPos.DesiredPosition = maintainPos.OriginalDesiredPosition + amountWithDirection;
+                    maintainPos.DesiredPosition = maintainPos.OriginalDesiredPosition + cooledAmountWithDirection;
                 }
                 else
                 {
@@ -117,6 +106,119 @@ namespace Assets.Scripts.AudioReactiveEffects
         {
             // newvalue = (max'-min')/ (max - min) * (value - max) + max'
             return (max - min) / RealtimeAudio.MaxAudioValue * (value - RealtimeAudio.MaxAudioValue) + max;
+        }
+
+        private Vector3 doCooldown(ReactiveRagdollPart ragdollPart, int i, Vector3 amountWithDirection)
+        {
+            // --------
+            // X
+            // --------
+            if (ragdollPart.IsInCooldownX)
+            {
+                amountWithDirection.x = 0.0f;
+                ragdollPart.PositiveImpulseCooldown.x += Time.deltaTime;
+
+                if (ragdollPart.PositiveImpulseCooldown.x > ragdollPart.MaxPositiveImpulseCooldown.x)
+                {
+                    ragdollPart.IsInCooldownX = false;
+                    ragdollPart.PositiveImpulseCooldown.x = 0.0f;
+                }
+            }
+            else
+            {
+                // Record how long the amount has been positive
+                if (amountWithDirection.x > 0.0f)
+                {
+                    // If there is a value for this axis, see how long we've been in the positives
+                    if (ragdollPart.MaxPositiveImpulseDuration.x > 0.0f
+                        && ragdollPart.PositiveImpulseDuration.x > ragdollPart.MaxPositiveImpulseDuration.x)
+                    {
+                        // If too long, cool down
+                        ragdollPart.IsInCooldownX = true;
+                    }
+
+                    ragdollPart.PositiveImpulseDuration.x += Time.deltaTime;
+                }
+                else
+                {
+                    ragdollPart.PositiveImpulseDuration.x = 0.0f;
+                }
+            }
+
+            // --------
+            // Y
+            // --------
+            if (ragdollPart.IsInCooldownY)
+            {
+                amountWithDirection.y = 0.0f;
+                ragdollPart.PositiveImpulseCooldown.y += Time.deltaTime;
+
+                if (ragdollPart.PositiveImpulseCooldown.y > ragdollPart.MaxPositiveImpulseCooldown.y)
+                {
+                    ragdollPart.IsInCooldownY = false;
+                    ragdollPart.PositiveImpulseCooldown.y = 0.0f;
+                }
+            }
+            else
+            {
+                // Record how long the amount has been positive
+                if (amountWithDirection.y > 0.0f)
+                {
+                    // If there is a value for this axis, see how long we've been in the positives
+                    if (ragdollPart.MaxPositiveImpulseDuration.y > 0.0f
+                        && ragdollPart.PositiveImpulseDuration.y > ragdollPart.MaxPositiveImpulseDuration.y)
+                    {
+                        // If too long, cool down
+                        ragdollPart.IsInCooldownY = true;
+                    }
+
+                    ragdollPart.PositiveImpulseDuration.y += Time.deltaTime;
+                }
+                else
+                {
+                    ragdollPart.PositiveImpulseDuration.y = 0.0f;
+                }
+            }
+
+            // --------
+            // Z
+            // --------
+            if (ragdollPart.IsInCooldownZ)
+            {
+                amountWithDirection.z = 0.0f;
+                ragdollPart.PositiveImpulseCooldown.z += Time.deltaTime;
+
+                if (ragdollPart.PositiveImpulseCooldown.z > ragdollPart.MaxPositiveImpulseCooldown.z)
+                {
+                    ragdollPart.IsInCooldownZ = false;
+                    ragdollPart.PositiveImpulseCooldown.z = 0.0f;
+                }
+            }
+            else
+            {
+                // Record how long the amount has been positive
+                if (amountWithDirection.z > 0.0f)
+                {
+                    // If there is a value for this axis, see how long we've been in the positives
+                    if (ragdollPart.MaxPositiveImpulseDuration.z > 0.0f
+                        && ragdollPart.PositiveImpulseDuration.z > ragdollPart.MaxPositiveImpulseDuration.z)
+                    {
+                        // If too long, cool down
+                        ragdollPart.IsInCooldownZ = true;
+                    }
+
+                    ragdollPart.PositiveImpulseDuration.z += Time.deltaTime;
+                }
+                else
+                {
+                    ragdollPart.PositiveImpulseDuration.z = 0.0f;
+                }
+            }
+
+            // Make sure to update the struct!
+            _currentPose.RagdollParts[i] = ragdollPart;
+
+            return amountWithDirection;
         }
     }
 }

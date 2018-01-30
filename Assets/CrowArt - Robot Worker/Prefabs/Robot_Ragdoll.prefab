@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 54334674943295272}
   - component: {fileID: 144574111022706386}
   - component: {fileID: 114102909766541638}
+  - component: {fileID: 114092405015446148}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -272,6 +273,7 @@ GameObject:
   - component: {fileID: 65952379128003988}
   - component: {fileID: 54881178944272222}
   - component: {fileID: 114570969758498032}
+  - component: {fileID: 114596762032991786}
   m_Layer: 0
   m_Name: hips
   m_TagString: Untagged
@@ -322,6 +324,7 @@ GameObject:
   - component: {fileID: 54018891810775014}
   - component: {fileID: 144884035884265088}
   - component: {fileID: 114582647431154128}
+  - component: {fileID: 114059007338141450}
   m_Layer: 0
   m_Name: R_knee
   m_TagString: Untagged
@@ -374,6 +377,7 @@ GameObject:
   - component: {fileID: 54936272065362558}
   - component: {fileID: 144159968291065856}
   - component: {fileID: 114394066213616248}
+  - component: {fileID: 114412538921627862}
   m_Layer: 0
   m_Name: L_leg
   m_TagString: Untagged
@@ -437,6 +441,7 @@ GameObject:
   - component: {fileID: 54853719630244260}
   - component: {fileID: 144719506827890946}
   - component: {fileID: 114437703380653024}
+  - component: {fileID: 114902698261834512}
   m_Layer: 0
   m_Name: R_ankle_1
   m_TagString: Untagged
@@ -488,6 +493,7 @@ GameObject:
   - component: {fileID: 54547394234068280}
   - component: {fileID: 144495101247151368}
   - component: {fileID: 114558916149160282}
+  - component: {fileID: 114325017871738268}
   m_Layer: 0
   m_Name: R_leg
   m_TagString: Untagged
@@ -558,6 +564,7 @@ GameObject:
   - component: {fileID: 54128995911079078}
   - component: {fileID: 144343026765180258}
   - component: {fileID: 114908789299242564}
+  - component: {fileID: 114703990997696656}
   m_Layer: 0
   m_Name: L_knee
   m_TagString: Untagged
@@ -1596,6 +1603,36 @@ MonoBehaviour:
   LeadTime: 0.3
   WaitForInit: 1
   RestInitDelay: 2
+--- !u!114 &114059007338141450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434735748172408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcbef64979cff145be3b77b42689c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyForward: {x: 0, y: 0, z: 1}
+  FacingDirection: {x: 0, y: 0, z: 1}
+  FacingForce: 120
+  LeadTime: 0
+--- !u!114 &114092405015446148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087307330989558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcbef64979cff145be3b77b42689c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyForward: {x: 0, y: 0, z: 1}
+  FacingDirection: {x: 0, y: 0, z: 1}
+  FacingForce: 100
+  LeadTime: 0
 --- !u!114 &114102909766541638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1700,6 +1737,21 @@ MonoBehaviour:
   FacingDirection: {x: 0, y: 0, z: 1}
   FacingForce: 100
   LeadTime: 0
+--- !u!114 &114325017871738268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690494972973350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcbef64979cff145be3b77b42689c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyForward: {x: 0, y: 0, z: 1}
+  FacingDirection: {x: 0, y: 0, z: 1}
+  FacingForce: 100
+  LeadTime: 0
 --- !u!114 &114390552684391196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1711,12 +1763,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b05aada214d39e448c2b60b68a65d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DesiredPosition: {x: 0, y: 0, z: -1}
+  DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
   WaitForInit: 1
   RestInitDelay: 2
 --- !u!114 &114394066213616248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546106168547802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcbef64979cff145be3b77b42689c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyForward: {x: 0, y: 0, z: 1}
+  FacingDirection: {x: 0, y: 0, z: 1}
+  FacingForce: 100
+  LeadTime: 0
+--- !u!114 &114412538921627862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1837,6 +1904,22 @@ MonoBehaviour:
   FacingDirection: {x: 0, y: 0, z: 1}
   FacingForce: 120
   LeadTime: 0
+--- !u!114 &114596762032991786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363814078606064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b05aada214d39e448c2b60b68a65d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredPosition: {x: 0, y: 0, z: 0}
+  PullForce: 120
+  LeadTime: 0.3
+  WaitForInit: 0
+  RestInitDelay: 2
 --- !u!114 &114618485949606326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1848,11 +1931,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b05aada214d39e448c2b60b68a65d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DesiredPosition: {x: 0, y: 0, z: -1}
+  DesiredPosition: {x: 0, y: 0, z: 0}
   PullForce: 60
   LeadTime: 0.3
   WaitForInit: 1
   RestInitDelay: 2
+--- !u!114 &114703990997696656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769381469103968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcbef64979cff145be3b77b42689c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyForward: {x: 0, y: 0, z: 1}
+  FacingDirection: {x: 0, y: 0, z: 1}
+  FacingForce: 120
+  LeadTime: 0
 --- !u!114 &114863480026854596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1884,6 +1982,21 @@ MonoBehaviour:
   LeadTime: 0.3
   WaitForInit: 0
   RestInitDelay: 2
+--- !u!114 &114902698261834512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621192941911828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcbef64979cff145be3b77b42689c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyForward: {x: 0, y: 0, z: -1}
+  FacingDirection: {x: 0, y: 0, z: 1}
+  FacingForce: 120
+  LeadTime: 0
 --- !u!114 &114908789299242564
 MonoBehaviour:
   m_ObjectHideFlags: 1

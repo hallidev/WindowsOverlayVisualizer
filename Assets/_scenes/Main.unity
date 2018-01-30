@@ -731,10 +731,6 @@ MonoBehaviour:
     FacingDirection: {x: 0, y: 0, z: 1}
     RagdollParts:
     - GameObject: {fileID: 1314642112}
-      RestingOffset: {x: 0, y: 0.2, z: 0}
-      PullForce: 0
-      LeadTime: 0
-      InitDelay: 0
       BumpDirection: {x: 1, y: 0, z: 0}
       SpectrumIndex: 0
       BumpAmountScale: 0.2
@@ -749,10 +745,6 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861101}
-      RestingOffset: {x: 0, y: 0, z: 0}
-      PullForce: 0
-      LeadTime: 0
-      InitDelay: 0
       BumpDirection: {x: 0, y: 1, z: 0}
       SpectrumIndex: 0
       BumpAmountScale: 0.4
@@ -767,11 +759,7 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861103}
-      RestingOffset: {x: 0, y: 0, z: 0}
-      PullForce: 0
-      LeadTime: 0
-      InitDelay: 0
-      BumpDirection: {x: -1, y: 1, z: 0.5}
+      BumpDirection: {x: -1, y: 1, z: 0}
       SpectrumIndex: 56
       BumpAmountScale: 0.8
       PullDown: 0.2
@@ -785,11 +773,7 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861102}
-      RestingOffset: {x: 0, y: 0, z: 0}
-      PullForce: 0
-      LeadTime: 0
-      InitDelay: 0
-      BumpDirection: {x: 1, y: 1, z: 0.5}
+      BumpDirection: {x: 1, y: 1, z: 0}
       SpectrumIndex: 56
       BumpAmountScale: 0.8
       PullDown: 0.2
@@ -803,11 +787,7 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861105}
-      RestingOffset: {x: 0, y: 0, z: 0}
-      PullForce: 0
-      LeadTime: 0
-      InitDelay: 0
-      BumpDirection: {x: 1, y: 1, z: -0.5}
+      BumpDirection: {x: 1, y: 1, z: 0}
       SpectrumIndex: 32
       BumpAmountScale: 0.8
       PullDown: 0.2
@@ -821,11 +801,7 @@ MonoBehaviour:
       IsInCooldownY: 0
       IsInCooldownZ: 0
     - GameObject: {fileID: 1319861104}
-      RestingOffset: {x: 0, y: 0, z: 0}
-      PullForce: 0
-      LeadTime: 0
-      InitDelay: 0
-      BumpDirection: {x: -1, y: 1, z: -0.5}
+      BumpDirection: {x: -1, y: 1, z: 0}
       SpectrumIndex: 32
       BumpAmountScale: 0.8
       PullDown: 0.2

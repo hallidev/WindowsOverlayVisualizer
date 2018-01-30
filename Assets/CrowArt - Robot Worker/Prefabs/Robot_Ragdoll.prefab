@@ -1791,7 +1791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioVisualizationStrategy: 4
   AudioSampleIndex: 0
-  PrimaryScaleFactor: 2
+  PrimaryScaleFactor: 1.75
 --- !u!114 &114437703380653024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3034,7 +3034,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -720688352
+  randomSeed: 141421690
   InitialModule:
     serializedVersion: 3
     enabled: 1
